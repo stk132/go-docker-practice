@@ -1,0 +1,3 @@
+package: github.com/stk132/go-docker-practice
+import:
+- package: github.com/fsouza/go-dockerclient

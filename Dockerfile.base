@@ -1,0 +1,4 @@
+FROM postgres:9.5
+
+RUN apt-get update -y && apt-get install -y task-japanese && locale-gen ja_JP.UTF-8
+RUN dpkg-reconfigure locales && localedef -i ja_JP -c -f UTF-8 -A /usr/share/locale/locale.alias ja_JP.UTF-8 && update-locale LC_ALL=ja_JP.UTF-8 && update-locale LANG=ja_JP.UTF-8 && update-locale LC_CTYPE=ja_JP.UTF-8 && update-locale LC_COLLATE=ja_JP.UTF-8
